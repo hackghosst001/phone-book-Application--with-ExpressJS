@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My-Contact</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body
+    style="
+      width: 90%;
+      height: 600px;
+      border: 5px solid black;
+      padding: 10px;
+      margin: auto;
+      margin-top: 20px;
+    "
+  >
+    <h1>My-Contact</h1>
+    <a href="/add-contact" class="btn-style">Add New Contact</a>
+    <br /><br />
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% contacts.forEach(contact => { %>
+        <tr>
+          <td><%= contact.name %></td>
+          <td><%= contact.phone %></td>
+          <td>
+            <a href="/edit-contact/<%= contact._id %>">Edit</a> |
+            <a
+              href="/delete-contact/<%= contact._id %>"
+              onclick="return confirm('Delete this contact?')"
+              >Delete</a
+            >
+          </td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </body>
+</html>

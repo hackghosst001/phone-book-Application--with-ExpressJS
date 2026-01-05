@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Update Contact</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>Edit Contact</h1>
+    <form action="/update/<%= contact._id %>" method="POST">
+      <div>
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value="<%= contact.name %>"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="phone">Phone:</label>
+        <input
+          type="text"
+          id="phone"
+          name="phone"
+          value="<%= contact.phone %>"
+          required
+        />
+      </div>
+      <br />
+      <button type="submit">Update Contact</button>
+    </form>
+  </body>
+</html>
