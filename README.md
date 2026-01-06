@@ -1,6 +1,6 @@
 ### 📱 Phone Book Manager
 **A simple, full-stack web application to manage your contacts.** 
-**Built with the MERN stack logic (specifically using Node.js, Express, MongoDB, and EJS).**
+**Built with the MVC Architecture using stack logic (specifically using Node.js, Express, MongoDB, and EJS).**
 
 ### 📝 Author
     BY-Anshu Raj
