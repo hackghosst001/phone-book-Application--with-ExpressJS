@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Contact</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
     <h1>Add New Contact</h1>
 
     <form action="/add" method="POST">
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-        </div>
-        <br>
-        <div>
-            <label for="phone">Phone:</label>
-            <input type="text" id="phone" name="phone" required>
-        </div>
-        <br>
-        <button type="submit">Save Contact</button>
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <br />
+      <div>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required />
+      </div>
+      <br />
+      <button type="submit">Save Contact</button>
     </form>
 
-    <br>
+    <br />
     <a href="/">Back to Contact List</a>
-
-</body>
+  </body>
 </html>
