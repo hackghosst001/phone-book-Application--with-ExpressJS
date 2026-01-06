@@ -43,20 +43,20 @@
 
 **1.Clone or create the directory:**
 
-        mkdir phone-book
-        cd phone-book
+        mkdir phone-book(keep name as you wish)
+        |-> cd phone-book
 
 **2.Initialize and install dependencies:**
 
-        npm init -y
-        npm install express mongoose ejs
+        |->npm init -y
+        |->npm install express mongoose ejs dotenv
 
 **3.Configure the database: Ensure your local MongoDB service is running.**
   **The app will automatically create the my_contact database.**
 
 **4.Run the application:**
 
-        npm run dev -> check script section of package.json file
+       |-> npm run dev (check script section of package.json file)
 
 **5.Access the app: Open your browser and navigate to http://localhost:3000.**
 
@@ -76,16 +76,26 @@
 
 ### 📂 Project Structure
 
-```text
-phone-book/
-  ├── models/
-  │   └── contact.model.js   # Mongoose Schema
-  ├── public/
-  │   └── style.css          # Custom Styling
-  ├── views/
-  │   ├── index.ejs          # Main List Page
-  │   ├── add-contact.ejs    # Create Form
-  │   └── update-contact.ejs # Edit Form
-  ├── control.js             # Main Server File
-  └── package.json           # Dependencies
-
+```textphone-book/
+├── config/
+│   └── database.js            # MongoDB connection logic
+├── controller/
+│   └── contact.controller.js  # Request handling & logic
+├── models/
+│   └── contact.model.js       # Mongoose Schema (Data structure)
+├── public/                    # Static assets
+│   ├── css/
+│   │   └── style.css
+│   └── media/                 # Images/Icons
+├── routes/
+│   └── contact.routes.js      # URL paths (GET, POST, etc.)
+├── views/                     # EJS Templates (UI)
+│   ├── 1.index.ejs
+│   ├── 2.add-contact.ejs
+│   └── 3.update-contact.ejs
+├── .env                       # Environment variables (HIDDEN)
+├── .gitignore                 # Files Git should ignore
+├── control.js                 # Entry point (Main Server file)
+├── package.json               # Project dependencies & scripts
+├── README.md                  # Project documentation
+└── node_modules/              # Installed packages (HIDDEN)
