@@ -1,8 +1,11 @@
 // include express module
-const app = express();
+
 // const express = require('express'); // old way
 
-import express from 'express'; // ES6 module syntax in new way
+
+import express from 'express'; // ES6 module syntax in(new way)//->importing the factory
+const app = express();                                         //->creating a product from factory
+
 
 import contactRoutes from './routes/contact.routes.js'; // Importing the routes
 
